@@ -22,9 +22,6 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/hamdanieadi/pxt-adxl343** and click import
 
-## Blocks preview
-
-<img width="212" alt="image" src="https://user-images.githubusercontent.com/102566565/160526359-ae15bbfc-6dec-4a1f-be66-23a708f13aa1.png">
 
 #### Metadata (used for search, rendering)
 
