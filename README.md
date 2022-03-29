@@ -1,5 +1,9 @@
+# **ADXL343**
+![ADXL343Z Evaluation Board](https://www.analog.com/-/media/analog/en/evaluation-board-images/images/eval-adxl343ztop-web.gif?la=en&imgver=1&h=270&thn=1&hash=C121427EE518C552AE93DB7492294331)
 
-> Open this page at [https://hamdanieadi.github.io/pxt-adxl343/](https://hamdanieadi.github.io/pxt-adxl343/)
+This is the MakeCode Extension for ADXL343 Accelerometer by Analog Devices, Inc. 
+
+For more details: [EVAL-ADXL343Z Evaluation Board | Analog Devices](https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/EVAL-ADXL343.html)
 
 ## Use as Extension
 
@@ -20,12 +24,21 @@ To edit this repository in MakeCode.
 
 ## Blocks preview
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/hamdanieadi/pxt-adxl343/raw/master/.github/makecode/blocks.png)
+<img width="212" alt="image" src="https://user-images.githubusercontent.com/102566565/160526359-ae15bbfc-6dec-4a1f-be66-23a708f13aa1.png">
 
 #### Metadata (used for search, rendering)
 
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+## Hardware Setup
+| ADXL343 | MICROBIT |
+|--|--|
+| VIO | 3V |
+| GND | GND |
+| CS | 3V |
+| VS | 3V |
+| SCL | PIN 19 |
+| SDA | PIN 20 |
+| SDO | GND |
+| INT1 | --- |
+| INT2 | --- |
