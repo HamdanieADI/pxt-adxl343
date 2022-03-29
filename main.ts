@@ -118,7 +118,7 @@ enum ADXL343Dimension {
 }
 
 //% weight=100 color=#00A654 icon="\uf085" block="I2C ADXL343"
-namespace hhgyu {
+namespace HamdanieADI {
     export class ADXL343 {
         private _address: number;
         private _range: ADXL343Range;
