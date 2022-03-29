@@ -133,13 +133,13 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_begin2
-        //% block="%adxl345|begin"
+        //% block="%adxl343|begin"
         public begin2() {
             this.begin()
         }
 
         //% blockId=ADXL343_begin
-        //% block="%adxl345|begin"
+        //% block="%adxl343|begin"
         public begin(): boolean {
             /* Check connection */
             let deviceid: number = this.getDeviceID();
@@ -156,7 +156,7 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_setrange
-        //% block="%adxl345|set range|$range"
+        //% block="%adxl343|set range|$range"
         //% range.defl=ADXL343Range.R2_G
         public setRange(range: ADXL343Range = ADXL343Range.R2_G) {
             /* Read the data format register to preserve bits */
@@ -177,28 +177,28 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_getrange
-        //% block="%adxl345|get range"
+        //% block="%adxl343|get range"
         public getRange(): ADXL343Range {
             /* Read the data format register to preserve bits */
             return this.readRegister(ADXL343Register.DATA_FORMAT) & 0x03;
         }
 
         //% blockId=ADXL343_setdatarate
-        //% block="%adxl345|set datarate|$dataRate"
+        //% block="%adxl343|set datarate|$dataRate"
         //% dataRate.defl=ADXL343DataRate.D0_10_HZ
         public setDataRate(dataRate: ADXL343DataRate = ADXL343DataRate.D0_10_HZ) {
             this.writeRegister(ADXL343Register.BW_RATE, dataRate);
         }
 
         //% blockId=ADXL343_getdatarate
-        //% block="%adxl345|get datarate"
+        //% block="%adxl343|get datarate"
         public getDataRate(): ADXL343DataRate {
             /* Read the data format register to preserve bits */
             return this.readRegister(ADXL343Register.BW_RATE) & 0x0F;
         }
 
         //% blockId=ADXL343_writeRegister
-        //% block="%adxl345|write byte register $reg|value $value"
+        //% block="%adxl343|write byte register $reg|value $value"
         //% reg.defl=ADXL343Register.DEVID
         //% value.defl=0
         public writeRegister(reg: ADXL343Register = ADXL343Register.DEVID, value: number = 0): void {
@@ -209,7 +209,7 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_readRegister
-        //% block="%adxl345|read byte register $reg"
+        //% block="%adxl343|read byte register $reg"
         //% reg.defl=ADXL343Register.DEVID
         public readRegister(reg: ADXL343Register = ADXL343Register.DEVID): number {
             pins.i2cWriteNumber(this._address, reg, NumberFormat.UInt8LE)
@@ -217,7 +217,7 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_readRegisterI16
-        //% block="%adxl345|read word register $reg"
+        //% block="%adxl343|read word register $reg"
         //% reg.defl=ADXL343Register.DATAX0
         public readRegisterI16(reg: ADXL343Register = ADXL343Register.DATAX0): number {
             pins.i2cWriteNumber(this._address, reg, NumberFormat.UInt8LE)
@@ -225,14 +225,14 @@ namespace hhgyu {
         }
 
         //% blockId=ADXL343_getDeviceID
-        //% block="%adxl345|deviceId"
+        //% block="%adxl343|deviceId"
         //% blockSetVariable=id
         public getDeviceID(): number {
             return this.readRegister(ADXL343Register.DEVID)
         }
 
         //% blockId=ADXL343_get
-        //% block="%adxl345|get|$dim"
+        //% block="%adxl343|get|$dim"
         //% dim.defl=ADXL343Dimension.X
         public get(dim: ADXL343Dimension = ADXL343Dimension.X): number {
             if (dim == ADXL343Dimension.X)
@@ -249,7 +249,7 @@ namespace hhgyu {
     //% block="new address $address|range $range"
     //% address.defl=83
     //% range.defl=ADXL343Range.R2_G
-    //% blockSetVariable=adxl345
+    //% blockSetVariable=adxl343
     export function ADXL343New(address: number = 83, range: ADXL343Range = ADXL343Range.R2_G): ADXL343 {
         return new ADXL343(address, range)
     }
